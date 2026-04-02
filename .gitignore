@@ -1,0 +1,29 @@
+# .gitignore for Melanoma_RNAseq pipeline
+
+# Raw and processed sequencing data
+data/raw/
+data/trimmed/
+
+# BAM files
+*.bam
+*.bam.bai
+
+# Genome files 
+genome/fasta/
+genome/gtf/
+genome/star_index/
+
+# featureCounts output 
+data/counts/*.summary
+
+# R session artifacts
+.Rhistory
+.RData
+*.Rout
+
+# conda artifacts
+__pycache__/
+*.pyc
+
+# System files
+.DS_Store
