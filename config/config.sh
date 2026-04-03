@@ -29,7 +29,9 @@ STAR_RAM="60000000000"
 STRANDEDNESS=0
 FC_THREADS=8
 
-# Samples - fill in after GEO metadata review
-SAMPLES=()
-TUMOR_SAMPLES=()
-NORMAL_SAMPLES=()
+# Samples
+SAMPLES=("Pt1" "Pt2" "Pt4" "Pt5" "Pt6" "Pt7" "Pt8" "Pt9" "Pt10" "Pt12" "Pt13" "Pt14" "Pt15" "Pt16" "Pt19" "Pt20" "Pt22" "Pt23" "Pt25" "Pt28" "Pt29")
+
+RESPONDERS=("Pt2" "Pt4" "Pt5" "Pt6" "Pt8" "Pt9" "Pt13" "Pt15" "Pt19" "Pt28")
+
+NON_RESPONDERS=("Pt1" "Pt7" "Pt10" "Pt12" "Pt14" "Pt16" "Pt20" "Pt22" "Pt23" "Pt25" "Pt29")
