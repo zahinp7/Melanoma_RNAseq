@@ -25,6 +25,7 @@ STAR_THREADS=16
 STAR_RAM="60000000000"
 
 # featureCounts parameters
+# unstranded
 STRANDEDNESS=0
 FC_THREADS=8
 
