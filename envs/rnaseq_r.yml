@@ -1,0 +1,15 @@
+name: rnaseq_r
+channels:
+  - bioconda
+  - conda-forge
+  - defaults
+channel_priority: flexible
+dependencies:
+  - r-base
+  - bioconductor-deseq2
+  - bioconductor-clusterprofiler
+  - bioconductor-enrichplot
+  - r-ggplot2
+  - r-pheatmap
+  - r-dplyr
+  - r-ggrepel

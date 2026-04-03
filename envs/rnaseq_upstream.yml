@@ -1,0 +1,18 @@
+# Environment: bioinfo (already installed on Bridges-2)
+# Used for: Stages 2-7 (FastQC, fastp, STAR, featureCounts, samtools, rseqc)
+# To recreate: conda env create -f envs/rnaseq_upstream.yml
+
+name: bioinfo
+channels:
+  - bioconda
+  - conda-forge
+  - defaults
+dependencies:
+  - fastqc
+  - multiqc
+  - fastp
+  - star=2.7.11b
+  - subread
+  - samtools
+  - rseqc
+  - sra-tools
