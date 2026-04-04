@@ -16,6 +16,9 @@ genome/star_index/
 # featureCounts output 
 data/counts/*.summary
 
+# Logs
+logs/
+
 # R session artifacts
 .Rhistory
 .RData

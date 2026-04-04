@@ -1,15 +1,12 @@
+# Environment: rnaseq_r
+# Used for: Stages 8-9 (DESeq2, clusterProfiler, visualization)
+# To recreate:
+#   conda create -n rnaseq_r -c conda-forge r-base -y
+#   conda activate rnaseq_r
+#   R  (then run scripts/install_r_packages.R)
+
 name: rnaseq_r
 channels:
-  - bioconda
   - conda-forge
-  - defaults
-channel_priority: flexible
 dependencies:
   - r-base
-  - bioconductor-deseq2
-  - bioconductor-clusterprofiler
-  - bioconductor-enrichplot
-  - r-ggplot2
-  - r-pheatmap
-  - r-dplyr
-  - r-ggrepel
