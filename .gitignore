@@ -3,6 +3,7 @@
 # Raw and processed sequencing data
 data/raw/
 data/trimmed/
+qc/
 
 # BAM files
 *.bam
