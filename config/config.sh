@@ -24,6 +24,9 @@ READ_LENGTH=100
 STAR_THREADS=16
 STAR_RAM="60000000000"
 
+ALIGN_PASS1="${PROJECT_DIR}/data/alignments/pass1"
+ALIGN_PASS2="${PROJECT_DIR}/data/alignments/pass2"
+
 # featureCounts parameters
 # unstranded
 STRANDEDNESS=0
