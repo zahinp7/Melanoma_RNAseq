@@ -16,7 +16,7 @@ RESULTS_FIGURES="${PROJECT_DIR}/results/figures"
 LOGS="${PROJECT_DIR}/logs"
 
 # Reference genome
-GTF_FILE="${GENOME_GTF}/gencode.v45.primary_assembly.annotation.gtf"
+GTF_FILE="${GENOME_GTF}/gencode.v49.primary_assembly.annotation.gtf"
 FASTA_FILE="${GENOME_FASTA}/GRCh38.primary_assembly.genome.fa"
 
 # STAR parameters
@@ -35,3 +35,5 @@ SAMPLES=("Pt1" "Pt2" "Pt4" "Pt5" "Pt6" "Pt7" "Pt8" "Pt9" "Pt10" "Pt12" "Pt13" "P
 RESPONDERS=("Pt2" "Pt4" "Pt5" "Pt6" "Pt8" "Pt9" "Pt13" "Pt15" "Pt19" "Pt28")
 
 NON_RESPONDERS=("Pt1" "Pt7" "Pt10" "Pt12" "Pt14" "Pt16" "Pt20" "Pt22" "Pt23" "Pt25" "Pt29")
+
+SRR_IDS=("SRR3184279" "SRR3184280" "SRR3184281" "SRR3184282" "SRR3184283" "SRR3184284" "SRR3184285" "SRR3184286" "SRR3184287" "SRR3184288" "SRR3184289" "SRR3184290" "SRR3184291" "SRR3184292" "SRR3184293" "SRR3184294" "SRR3184295" "SRR3184296" "SRR3184297" "SRR3184300" "SRR3184301")
