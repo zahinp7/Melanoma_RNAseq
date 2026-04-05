@@ -21,6 +21,11 @@ mkdir -p "$ALIGN_PASS2"
 
 echo "[$(date +"%H:%M:%S")] STAR Pass 1 - discovering splice junctions"
 
+if [ -f "$ALIGN_PASS1/$SRR/SJ.out.tab" ]; then
+    echo "[$(date +"%H:%M:%S")] Pass 1 already done for $SRR, skipping"
+    continue
+fi
+
 for SRR in "${SRR_IDS[@]}"; do
     echo "[$(date +"%H:%M:%S")] Pass 1: $SRR"
 
@@ -55,6 +60,7 @@ for SRR in "${SRR_IDS[@]}"; do
         --readFilesIn "$DATA_TRIMMED/${SRR}_1.fastq.gz" "$DATA_TRIMMED/${SRR}_2.fastq.gz" \
         --readFilesCommand zcat \
         --sjdbFileChrStartEnd "$ALIGN_PASS1/merged_SJ.out.tab" \
+        --limitSjdbInsertNsj 2000000 \
         --outSAMtype BAM SortedByCoordinate \
         --outSAMattributes NH HI AS NM MD \
         --runThreadN "$STAR_THREADS" \
