@@ -18,15 +18,17 @@ source /ocean/projects/cis250160p/peerzade/Melanoma_RNAseq/config/config.sh
 
 mkdir -p "$ALIGN_PASS1"
 mkdir -p "$ALIGN_PASS2"
+mkdir -p "$QC_ALIGN"
 
 echo "[$(date +"%H:%M:%S")] STAR Pass 1 - discovering splice junctions"
 
-if [ -f "$ALIGN_PASS1/$SRR/SJ.out.tab" ]; then
-    echo "[$(date +"%H:%M:%S")] Pass 1 already done for $SRR, skipping"
-    continue
-fi
-
 for SRR in "${SRR_IDS[@]}"; do
+
+    if [ -f "$ALIGN_PASS1/$SRR/SJ.out.tab" ]; then
+        echo "[$(date +"%H:%M:%S")] Pass 1 already done for $SRR, skipping"
+        continue
+    fi
+
     echo "[$(date +"%H:%M:%S")] Pass 1: $SRR"
 
     mkdir -p "$ALIGN_PASS1/$SRR"
@@ -41,6 +43,7 @@ for SRR in "${SRR_IDS[@]}"; do
         --runThreadN "$STAR_THREADS" \
         --limitBAMsortRAM "$STAR_RAM" \
         --outFileNamePrefix "$ALIGN_PASS1/$SRR/"
+
 done
 
 echo "[$(date +"%H:%M:%S")] Merging splice junctions"
@@ -50,6 +53,7 @@ cat "$ALIGN_PASS1"/*/SJ.out.tab | sort -u > "$ALIGN_PASS1/merged_SJ.out.tab"
 echo "[$(date +"%H:%M:%S")] STAR Pass 2 - final alignment"
 
 for SRR in "${SRR_IDS[@]}"; do
+
     echo "[$(date +"%H:%M:%S")] Pass 2: $SRR"
 
     mkdir -p "$ALIGN_PASS2/$SRR"
@@ -69,7 +73,12 @@ for SRR in "${SRR_IDS[@]}"; do
 
     samtools index "$ALIGN_PASS2/$SRR/Aligned.sortedByCoord.out.bam"
 
+    samtools flagstat \
+        "$ALIGN_PASS2/$SRR/Aligned.sortedByCoord.out.bam" \
+        > "$QC_ALIGN/${SRR}_flagstat.txt"
+
     echo "[$(date +"%H:%M:%S")] Done: $SRR"
+
 done
 
 echo "[$(date +"%H:%M:%S")] Alignment complete"
