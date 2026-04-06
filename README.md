@@ -6,7 +6,7 @@ Independent reanalysis of GSE78220 (Hugo et al., Cell 2016) characterizing trans
 
 ## Background
 
-Anti-PD1 therapy produces durable responses in only 30-40% of metastatic melanoma patients. Hugo et al. identified a transcriptional resistance program — IPRES (Innate anti-PD1 RESistance) — present in pre-treatment tumor biopsies of non-responding patients, involving upregulation of mesenchymal transition, ECM remodeling, angiogenesis, and wound healing gene sets. This pipeline independently reanalyzes the raw sequencing data using a modern computational workflow to reproduce and extend those findings.
+Anti-PD1 therapy produces durable responses in only 30-40% of metastatic melanoma patients. Hugo et al. identified a transcriptional resistance program - IPRES (Innate anti-PD1 RESistance) - present in pre-treatment tumor biopsies of non-responding patients, involving upregulation of mesenchymal transition, ECM remodeling, angiogenesis, and wound healing gene sets. This pipeline independently reanalyzes the raw sequencing data using a modern computational workflow to reproduce and extend those findings.
 
 ---
 
@@ -29,14 +29,14 @@ Anti-PD1 therapy produces durable responses in only 30-40% of metastatic melanom
 ```
 Stage 0   Environment and project structure setup
 Stage 1   Data acquisition and metadata validation (GEO)
-Stage 2   Raw QC — FastQC + MultiQC
-Stage 3   Adapter trimming — fastp (paired-end)
-Stage 4   Post-trim QC — FastQC + MultiQC
-Stage 5   Genome indexing — STAR (GRCh38, Gencode v45)
-Stage 6   Alignment — STAR 2-pass mode
-Stage 7   Quantification — featureCounts (unstranded)
-Stage 8   Differential expression — DESeq2
-Stage 9   Downstream — GSEA, clusterProfiler, figures
+Stage 2   Raw QC - FastQC + MultiQC
+Stage 3   Adapter trimming - fastp (paired-end)
+Stage 4   Post-trim QC - FastQC + MultiQC
+Stage 5   Genome indexing - STAR (GRCh38, Gencode v45)
+Stage 6   Alignment - STAR 2-pass mode
+Stage 7   Quantification - featureCounts (unstranded)
+Stage 8   Differential expression - DESeq2
+Stage 9   Downstream - GSEA, clusterProfiler, figures
 ```
 
 ---
@@ -139,5 +139,6 @@ Hugo W, Zaretsky JM, Sun L, et al. Genomic and Transcriptomic Features of Respon
 
 ## Author
 
-Zahin Peerzade   
+Zahin Peerzade  
+M.S. Quantitative Biology and Bioinformatics, Carnegie Mellon University  
 [github.com/zahinp7](https://github.com/zahinp7) | zahinp7@gmail.com
