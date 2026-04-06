@@ -1,4 +1,4 @@
-# Melanoma Anti-PD1 Immunotherapy — Bulk RNA-seq Pipeline
+# Melanoma Anti-PD1 Immunotherapy - Bulk RNA-seq Pipeline
 
 Independent reanalysis of GSE78220 (Hugo et al., Cell 2016) characterizing transcriptional differences between anti-PD1 responders and non-responders in metastatic melanoma.
 
