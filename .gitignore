@@ -17,6 +17,11 @@ genome/star_index/
 # featureCounts output 
 data/counts/*.summary
 
+
+# alignment
+data/alignments/
+data/counts/
+
 # Logs
 logs/
 

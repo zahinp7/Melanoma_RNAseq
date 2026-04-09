@@ -1,6 +1,6 @@
 #!/bin/bash
 #SBATCH --job-name=featurecounts
-#SBATCH --time=04:00:00
+#SBATCH --time=01:00:00
 #SBATCH --ntasks=8
 #SBATCH --mem=32G
 #SBATCH --output=logs/07_featurecounts_%j.log
